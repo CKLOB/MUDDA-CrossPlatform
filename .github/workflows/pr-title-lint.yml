@@ -1,0 +1,44 @@
+name: PR Title Lint
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  pull-requests: read
+  statuses: write
+
+jobs:
+  check-title:
+    name: PR Title Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require exact title for PRs into main
+        if: github.event.pull_request.base.ref == 'main'
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          if [ "$PR_TITLE" != "merge to main" ]; then
+            echo "main으로 가는 PR의 제목은 정확히 'merge to main' 이어야 합니다. (현재: '$PR_TITLE')"
+            exit 1
+          fi
+
+      - uses: amannn/action-semantic-pull-request@v5
+        if: github.event.pull_request.base.ref != 'main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            chore
+            ci
+            build
+            revert
+          requireScope: false
+          subjectPattern: ^(?!\s*$).+$
