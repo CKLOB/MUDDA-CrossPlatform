@@ -8,9 +8,12 @@
     "scheme": "muddacrossplatform",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.mudda.app",
+      "supportsTablet": true
     },
     "android": {
+      "package": "com.mudda.app",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -37,6 +40,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "05e62bad-18f6-4f44-8603-c0020f0d8b55"
+      }
+    },
+    "owner": "h4zx7"
   }
 }
