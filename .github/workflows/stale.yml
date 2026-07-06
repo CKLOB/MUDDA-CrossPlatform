@@ -1,0 +1,29 @@
+name: Stale
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 30
+          days-before-close: 7
+          stale-issue-label: 'stale'
+          stale-pr-label: 'stale'
+          exempt-issue-labels: 'pinned,security'
+          exempt-pr-labels: 'pinned,security'
+          stale-issue-message: >
+            이 이슈는 30일 동안 활동이 없어 stale 상태로 표시됩니다.
+            7일 내 추가 활동이 없으면 자동으로 닫힙니다.
+          stale-pr-message: >
+            이 PR은 30일 동안 활동이 없어 stale 상태로 표시됩니다.
+            7일 내 추가 활동이 없으면 자동으로 닫힙니다.
