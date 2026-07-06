@@ -33,7 +33,7 @@ jobs:
         run: eas update --branch "pr-${{ github.event.number }}" --message "${{ github.event.pull_request.title }}" --non-interactive
 
       - name: Comment preview link on PR
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const body = `📦 EAS Update 프리뷰가 \`pr-${{ github.event.number }}\` 채널로 게시되었습니다.\n\nExpo 대시보드에서 확인하세요: https://expo.dev/accounts/h4zx7/projects/${context.repo.repo}/updates`;
