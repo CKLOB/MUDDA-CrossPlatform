@@ -5,13 +5,13 @@ updates:
     schedule:
       interval: 'weekly'
     open-pull-requests-limit: 10
-    groups:
-      expo-and-react-native:
-        patterns:
-          - 'expo*'
-          - 'react-native*'
-          - 'react'
-          - 'react-dom'
+    ignore:
+      # Expo SDK가 버전을 고정 관리하는 패키지들 — 일반 semver bump로 올리면
+      # expo-doctor 호환성 검사와 충돌한다. SDK 업그레이드 시 `npx expo install`로 함께 맞춘다.
+      - dependency-name: 'expo*'
+      - dependency-name: 'react-native*'
+      - dependency-name: 'react'
+      - dependency-name: 'react-dom'
     labels:
       - 'dependencies'
     commit-message:
