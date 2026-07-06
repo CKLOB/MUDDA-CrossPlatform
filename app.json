@@ -49,7 +49,7 @@
     },
     "owner": "h4zx7",
     "runtimeVersion": {
-      "policy": "appVersion"
+      "policy": "fingerprint"
     },
     "updates": {
       "url": "https://u.expo.dev/05e62bad-18f6-4f44-8603-c0020f0d8b55"
