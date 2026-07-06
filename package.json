@@ -58,6 +58,15 @@
     "test:ci": "jest --ci --coverage",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
+  },
   "private": true,
   "jest": {
     "preset": "jest-expo"
