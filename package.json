@@ -34,7 +34,7 @@
     "@commitlint/config-conventional": "^21.2.0",
     "@types/jest": "29.5.14",
     "@types/react": "~19.2.2",
-    "eslint": "^9.0.0",
+    "eslint": "^10.7.0",
     "eslint-config-expo": "~57.0.0",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
