@@ -5,7 +5,8 @@ updates:
     target-branch: 'develop'
     schedule:
       interval: 'weekly'
-    open-pull-requests-limit: 10
+    # Dependabot 버전 업데이트 PR 생성 비활성화 (보안 업데이트 PR은 유지)
+    open-pull-requests-limit: 0
     ignore:
       # Expo SDK가 버전을 고정 관리하는 패키지들 — 일반 semver bump로 올리면
       # expo-doctor 호환성 검사와 충돌한다. SDK 업그레이드 시 `npx expo install`로 함께 맞춘다.
@@ -23,6 +24,8 @@ updates:
     target-branch: 'develop'
     schedule:
       interval: 'weekly'
+    # Dependabot 버전 업데이트 PR 생성 비활성화 (보안 업데이트 PR은 유지)
+    open-pull-requests-limit: 0
     labels:
       - 'ci'
     commit-message:
