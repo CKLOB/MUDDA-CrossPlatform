@@ -42,7 +42,7 @@
     "jest-expo": "~57.0.1",
     "lint-staged": "^17.0.8",
     "prettier": "^3.9.4",
-    "typescript": "~6.0.3"
+    "typescript": "~7.0.2"
   },
   "scripts": {
     "start": "expo start",
