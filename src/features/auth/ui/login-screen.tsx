@@ -10,21 +10,21 @@ import { SocialLoginButton } from './social-login-button';
 const socialProviders = [
   {
     accessibilityLabel: 'Apple로 로그인',
-    icon: require('../../../../assets/images/auth/apple.png'),
+    icon: require('../../../../assets/images/auth/apple.svg'),
     iconWidth: AuthLayout.appleIconWidth,
     label: 'Apple로 시작하기',
     provider: 'apple',
   },
   {
     accessibilityLabel: '카카오로 로그인',
-    icon: require('../../../../assets/images/auth/kakao.png'),
+    icon: require('../../../../assets/images/auth/kakao.svg'),
     iconWidth: AuthLayout.kakaoIconWidth,
     label: '카카오로 시작하기',
     provider: 'kakao',
   },
   {
     accessibilityLabel: 'Google로 로그인',
-    icon: require('../../../../assets/images/auth/google.png'),
+    icon: require('../../../../assets/images/auth/google.svg'),
     iconWidth: AuthLayout.googleIconWidth,
     label: 'Google로 시작하기',
     provider: 'google',
