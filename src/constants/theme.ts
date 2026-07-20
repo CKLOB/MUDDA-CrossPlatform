@@ -14,6 +14,9 @@ export const Colors = {
     backgroundElement: '#F0F0F3',
     backgroundSelected: '#E0E1E6',
     textSecondary: '#60646C',
+    primary: '#E8A33D',
+    textOnPrimary: '#ffffff',
+    overlay: 'rgba(0, 0, 0, 0.45)',
   },
   dark: {
     text: '#ffffff',
@@ -21,6 +24,9 @@ export const Colors = {
     backgroundElement: '#212225',
     backgroundSelected: '#2E3135',
     textSecondary: '#B0B4BA',
+    primary: '#E8A33D',
+    textOnPrimary: '#ffffff',
+    overlay: 'rgba(0, 0, 0, 0.6)',
   },
 } as const;
 
